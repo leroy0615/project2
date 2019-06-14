@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 
 
 	def index
-		@places = Place.all.order("name").page(params[:page]).per_page(5)
+		@places = Place.all.order("name").page(params[:page]).per_page(8)
 	end
 	
 	def new
@@ -14,6 +14,10 @@ class PlacesController < ApplicationController
 		current_user.places.create(place_params)
   		redirect_to root_path
 
+	end
+
+	def show
+		@place = Place.find(params[:id])
 	end
 
 	private
