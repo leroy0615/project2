@@ -102,7 +102,7 @@ Add a comment
 
 
 
- <%= simple_form_for @photo, url: { multipart: true } do |f| %>
+ <%= simple_form_for @photo, url:rails_direct_uploads_path(@direct) do |f| %>
 
   <p>
     <label>My Pictue</label>

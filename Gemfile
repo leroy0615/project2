@@ -77,3 +77,4 @@ gem "geocoder"
 gem "figaro"
 gem 'carrierwave', '~> 1.3.1'
 gem "fog-aws"
+gem "figaro"
