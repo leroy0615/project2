@@ -26,7 +26,10 @@
 </div>
 
 
-<% end %>
+
+
+
+
 <%= will_paginate @places, previous_label: h("<"), next_label: h(">") %>
 
 <!-- or custom pagination -->
@@ -37,3 +40,8 @@ Page <%= @places.current_page %> of <%= @places.total_pages %>
 <% if @places.next_page %>
   <%= link_to "Next >", request.params.merge(page: @places.next_page) %>
 <% end %>
+<% end %>
+
+
+
+
