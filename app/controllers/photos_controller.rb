@@ -9,14 +9,14 @@ class PhotosController < ApplicationController
   end
 
 
-  
+
 
 
 
   private
 
   def photo_params
-params.require(:photo).permit(:email,  {pictures: []})  
+params.require(:photo).permit(:caption, :picture)
 end
 
 end

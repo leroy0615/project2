@@ -103,10 +103,11 @@ Add a comment
 
 
  <%= simple_form_for @photo, url:rails_direct_uploads_path(@direct) do |f| %>
+ <%= image_tag(@photo.picture_url) if @photo.picture? %>
 
   <p>
     <label>My Pictue</label>
-    <%= image_tag(@photo.picture_url) if @photo.picture? %>
+    
     <%= f.file_field :picture %>
     <%= f.hidden_field :pictures_cache %>
     <%= f.submit "submit" %>
