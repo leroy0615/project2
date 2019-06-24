@@ -23,8 +23,10 @@ class PlacesController < ApplicationController
 	def show
   @place = Place.find(params[:id])
   @comment = Comment.new
-   @place = Place.find(params[:id])
+ 
+  @place = Place.find(params[:id])
   @photo =Photo.new
+  
   end
 
 
@@ -62,7 +64,9 @@ class PlacesController < ApplicationController
 
 	private
 
+  
+
   def place_params
-    params.require(:place).permit(:name, :description, :address, :picture)
+    params.require(:place).permit(:name, :description, :address)
   end
 end

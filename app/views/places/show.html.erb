@@ -102,17 +102,26 @@ Add a comment
 
 
 
- <%= simple_form_for @photo, url:rails_direct_uploads_path(@direct) do |f| %>
- <%= image_tag(@photo.picture_url) if @photo.picture? %>
+ <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
 
-  <p>
-    <label>My Pictue</label>
-    
-    <%= f.file_field :picture %>
-    <%= f.hidden_field :pictures_cache %>
-    <%= f.submit "submit" %>
+  
+
+    <div class ="modal-body">
+    <%= f.input :picture, as: :file %>
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
   </p>
 <% end %>
+</div>
+
+<%= @place.photos.each do |photo| %>
+  <div class="col-12 col-sm-6">
+    <%= image_tag photo.picture.url  %>
+    <%= photo.caption %>
+  </div>
+<% end %>
+</div>
+
+
     
 
 
