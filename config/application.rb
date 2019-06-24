@@ -18,7 +18,7 @@ module Nomstere
     # config/application.rb
     
 
-    #config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = false
     # Add the fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
