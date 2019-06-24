@@ -102,13 +102,15 @@ Add a comment
 
 
 
- <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+ <div class="booyah-box">
+ <%= simple_form_for @photo, url:place_photos_path(@place) do |f| %>
 
-  
+  <p>
+    <label>My Pictue</label>
 
-    <div class ="modal-body">
+    
     <%= f.input :picture, as: :file %>
-    <%= f.submit "Submit", class: 'btn btn-primary' %>
+    <%= f.submit "submit" %>
   </p>
 <% end %>
 </div>
@@ -119,7 +121,8 @@ Add a comment
     <%= photo.caption %>
   </div>
 <% end %>
-</div>
+
+
 
 
     
