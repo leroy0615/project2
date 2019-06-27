@@ -105,18 +105,17 @@ Add a comment
  <div class="booyah-box">
  <%= simple_form_for @photo, url:place_photos_path(@place) do |f| %>
 
-  <p>
-    <label>My Pictue</label>
+  
 
     
     <%= f.input :picture, as: :file %>
-    <%= f.submit "submit" %>
-  </p>
+    <%= f.submit "submit", class: 'btn btn-primary' %>
+  
 <% end %>
 </div>
 
 <%= @place.photos.each do |photo| %>
-  <div class="col-12 col-sm-6">
+  <div class="col-12 col-sm-4">
     <%= image_tag photo.picture.url  %>
     <%= photo.caption %>
   </div>
